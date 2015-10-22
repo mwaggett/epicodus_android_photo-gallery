@@ -28,7 +28,9 @@
         android:id="@+id/previousButton"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:width="100dp"/>
+        android:width="100dp"
+        android:background="#881d09"
+        android:textColor="#ffffff"/>
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -38,7 +40,9 @@
         android:id="@+id/nextButton"
         android:width="100dp"
         android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"/>
+        android:layout_alignParentRight="true"
+        android:background="#881d09"
+        android:textColor="#ffffff"/>
 
     <TextView
         android:layout_width="wrap_content"
