@@ -3,24 +3,30 @@ package com.example.guest.shotsnap;
 import java.io.Serializable;
 import java.util.ArrayList;
 
-public class PhotoLib implements Serializable {
+public class Category implements Serializable{
 
+    private String mName;
     private ArrayList<Photo> mPhotos;
 
-    public PhotoLib() {
+    public Category(String name) {
+        mName = name;
         mPhotos = new ArrayList<Photo>();
+    }
 
-        mPhotos.add(new Photo(R.drawable.hedge1, "First hedgehog."));
-        mPhotos.add(new Photo(R.drawable.hedge2, "Second hedgehog."));
-        mPhotos.add(new Photo(R.drawable.hedge3, "Third hedgehog."));
-        mPhotos.add(new Photo(R.drawable.fox1, "First fox."));
-        mPhotos.add(new Photo(R.drawable.fox2, "Second fox."));
-        mPhotos.add(new Photo(R.drawable.fox3, "Third fox."));
+    public String getName() {
+        return mName;
+    }
 
+    public void setName(String name) {
+        mName = name;
     }
 
     public ArrayList<Photo> getPhotos() {
         return mPhotos;
+    }
+
+    public void addPhoto(Photo photo) {
+        mPhotos.add(photo);
     }
 
     public Photo nextPhoto(Photo currentPhoto) {
@@ -31,6 +37,7 @@ public class PhotoLib implements Serializable {
             return mPhotos.get(index+1);
         }
     }
+
     public Photo previousPhoto(Photo currentPhoto) {
         int index = mPhotos.indexOf(currentPhoto);
         if (index == 0) {

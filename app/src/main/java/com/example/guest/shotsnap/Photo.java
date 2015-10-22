@@ -1,6 +1,8 @@
 package com.example.guest.shotsnap;
 
-public class Photo {
+import java.io.Serializable;
+
+public class Photo implements Serializable {
 
     private int mSrc;
     private String mDescription;
